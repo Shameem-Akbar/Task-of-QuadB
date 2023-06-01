@@ -8,7 +8,7 @@ const ShowCard = ({ show }) => {
     return (
         <div className='mb-4'>
             <Card className='shadow' style={{ width: '21rem' }}>
-                <Card.Img variant="top" src={show.show.image?.medium} alt={show.show.name} />
+                <Card.Img style={{ height: "24rem" }} variant="top" src={show.show.image?.medium} alt={show.show.name} />
                 <Card.Body>
                     <Card.Title className='mb-1'>Show Name: <span className='fw-normal'>{show.show.name}</span></Card.Title>
                     <Card.Text className='mb-0'>
