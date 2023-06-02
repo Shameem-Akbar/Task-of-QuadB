@@ -24,7 +24,7 @@ const ShowCard = ({ show }) => {
                         <span className='fw-semibold'>Premiered:</span> {show.show.premiered}
                     </Card.Text>
                     <Link to={`/show/${show.show.id}`}>
-                        <Button variant="primary">Details</Button>
+                        <Button className='' variant="danger">Details</Button>
                     </Link>
                 </Card.Body>
             </Card>
