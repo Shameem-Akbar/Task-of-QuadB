@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import React from 'react';
 import Form from 'react-bootstrap/Form';
+import Swal from 'sweetalert2';
 
 const BookingMovieModal = ({ show }) => {
 
@@ -36,6 +37,15 @@ const BookingMovieModal = ({ show }) => {
         const time = form.time.value;
         const booking = { movieName: name, language: language, person: person, date: date, time: time };
         addBookingToLocalStorage(booking);
+        form.reset();
+        Swal.fire(
+            {
+                icon: 'success',
+                title: 'Movie Ticket Booked',
+                timer: '2000',
+                showConfirmButton: false,
+            }
+        )
     }
 
 
